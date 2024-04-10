@@ -26,9 +26,12 @@ function App() {
     <>
       <StatusBar backgroundColor={randomBackground} />
       <View style={[styles.container, {backgroundColor: randomBackground}]}>
+        <Text style={styles.AboutTxt}>
+          Change Background Color after press "ChangeColor" button.
+        </Text>
         <TouchableOpacity onPress={generateColor}>
           <View style={styles.actionBtn}>
-            <Text style={styles.actionBtnTxt}>Press me</Text>
+            <Text style={styles.actionBtnTxt}>Change BgColor</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -41,6 +44,10 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  AboutTxt: {
+    fontSize: 20,
+    paddingBottom: 30,
   },
   actionBtn: {
     borderRadius: 12,
